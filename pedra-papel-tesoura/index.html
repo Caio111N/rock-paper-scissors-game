@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Rock Paper Scissors Game</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1 id="titulo">Rock Paper Scissors Game</h1>
+
+  <!-- Tela inicial -->
+  <div id="menuInicial">
+    <button class="principal" onclick="iniciarJogo()">Play</button>
+  </div>
+
+  <!-- Escolha de modo -->
+  <div id="modoJogo" style="display:none;">
+    <button class="principal" onclick="escolherModo('cpu')">Play vs Computer</button>
+    <button class="principal" onclick="escolherModo('p2')">Play vs Player 2</button>
+  </div>
+
+  <!-- Botão de voltar -->
+  <div id="voltarInicio" style="display:none;">
+    <button class="principal" onclick="voltarInicio()">Back to Start</button>
+  </div>
+
+  <!-- Área do jogo -->
+  <div id="gameArea" style="display:none;">
+    <div class="botoes" id="player1Btns">
+      <h3>Player 1</h3>
+      <button class="secundario" onclick="jogar('pedra','p1')"><img src="img/rock.png" width="60"></button>
+      <button class="secundario" onclick="jogar('papel','p1')"><img src="img/paper.png" width="60"></button>
+      <button class="secundario" onclick="jogar('tesoura','p1')"><img src="img/scissors.png" width="60"></button>
+    </div>
+
+    <div class="botoes" id="player2Btns" style="display:none;">
+      <h3>Player 2</h3>
+      <button class="secundario" onclick="jogar('pedra','p2')"><img src="img/rock.png" width="60"></button>
+      <button class="secundario" onclick="jogar('papel','p2')"><img src="img/paper.png" width="60"></button>
+      <button class="secundario" onclick="jogar('tesoura','p2')"><img src="img/scissors.png" width="60"></button>
+    </div>
+  </div>
+
+  <!-- Resultado e placar -->
+  <div id="resultado"></div>
+  <div id="escolhas"></div>
+  <div id="placar"></div>
+
+  <!-- Histórico -->
+  <div id="historico" style="display:none;"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
